@@ -139,56 +139,14 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://media.licdn.com/dms/image/v2/D4E12AQFohizue2yNEw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1683894992458?e=2147483647&amp;v=beta&amp;t=WLZw0IvAbJlIzZY_WmkEyaRUDHSQbK9il7Uv_CnoWSA);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Church Turing Thesis</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://w0.peakpx.com/wallpaper/324/762/HD-wallpaper-anime-hello-world.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Turing machine is a computational model that has unrestricted memory. It is more general purpose and accurate compared to automata.</p>
-<h2 id="Definition-of-a-Turing-Machine"><a href="#Definition-of-a-Turing-Machine" class="headerlink" title="Definition of a Turing Machine"></a>Definition of a Turing Machine</h2><img src="/2025/06/04/church-turing-thesis/tm_def.png" class="" title="Turing Machine Definition">
-<p>Read as (Q, Sigma, Gamma, delta, q0, q_accept, and q_reject)</p>
-<h2 id="Configuration-of-TM"><a href="#Configuration-of-TM" class="headerlink" title="Configuration of TM"></a>Configuration of TM</h2><ul>
-<li>The configuration of TM represents:<ul>
-<li>current state (q)</li>
-<li>current content (first letter in v)</li>
-<li>and current location (evinced by u and v)</li>
-</ul>
-</li>
-<li>*<strong>u q v</strong>: the left tape + q + the right tape</li>
-<li>e.g. 0101 q5 01111</li>
-<li>the q represents the first tape block in the right tape (v)</li>
-<li>this means q5 indicates the state of the block that contains ‘0’</li>
-</ul>
-<p>Turing machine M accepts input $w$ if a sequence of configurations $C_1$, $C_2$, …, $C_k$ exists, where:</p>
-<ol>
-<li>$C_1$ is the starting configuration</li>
-<li>Each $C_i$ yields $C_(i+1)$</li>
-<li>$C_k$ is an accepting configuration</li>
-</ol>
-<h2 id="Language-of-M"><a href="#Language-of-M" class="headerlink" title="Language of M"></a>Language of M</h2><img src="/2025/06/04/church-turing-thesis/turing_recognizable_def.png" class="" title="Turing Recognizable">
-<p>The <strong>language of M</strong> is <em>the set of all strings that M accepts</em>.<br>If an input w is accepted by a TM, then w belongs to the language of the TM (or the language recognized by the TM).<br><strong>Recognize means, for an input w $\in$ the language, M accepts it, aka finishing in the accept state. While for an input w $\not\in$ the language, M can either fall into a state of accept or looping.</strong></p>
-<p>When a TM is given input, three outcomes are possible: accept, reject, and loop.</p>
-<img src="/2025/06/04/church-turing-thesis/turing_decidable_def.png" class="" title="Turing Decidable">
-<p>A <strong>decider</strong> is a TM that halts on all inputs, meaning never loops.<br>All deciders are recognizers.<br><strong>Decide means, for an input w $\in$ the language, M accepts it. While for w $\not\in$ the language, M rejects it.</strong></p>
-<p>Therefore, all Turing-decidable languages are Turing-recognizable. We can consider a decidable language to be a special case of the recognizable languages.</p>
-<h2 id="Practicing-Making-Turing-Machines"><a href="#Practicing-Making-Turing-Machines" class="headerlink" title="Practicing Making Turing Machines"></a>Practicing Making Turing Machines</h2><p>When designing TMs, we usually use higher-level descriptions with natural language instead of defining them using formal descriptions, which can be very tedious. However, the high-level descriptions of a TM is just a shorthand representation of its corresponding low-level sets of instructions.</p>
-<p>We will work on a classic problem of Turing Machine:<br><strong>design a TM that decides the language A &#x3D; {$0^{2^n}$ | $n &gt;&#x3D; 0$}. In natural language, a language consisting of strings of 0s whose length is a power of 2.</strong></p>
-<p>As a programmer and a noob in TOC, my instant intuition was to implement a counter that counts the number of 0s. However, Turing Machines cannot count! Our solution here would be, using two states to represent an even and an odd condition, and switch back and forth.</p>
-<p>Let’s first define this TM at a higher level:<br>M &#x3D; “On input string w:</p>
-<ol>
-<li>Sweep from left to right, crossing off every other 0. (From left to right, cross of an unmarked 0, then skip one block, and cross of the one after and so on.) e.g. 00000 -&gt; 0x0x0</li>
-<li>If in stage 1 and the tape contains a single 0, accept</li>
-<li>If in stage 2 and the tape contains more than a single 0 and the number of 0s is odd, reject.</li>
-<li>Return the head to the left-hand end of the tape.</li>
-<li>Go back to stage 1.”</li>
-</ol>
-<p>And here is how you can define it in a formal way:<br><strong>M &#x3D; {Q, $\Sigma$,  $\Gamma$, $\delta$, $q_0$, $q_\text{accept}$, $q_\text{reject}$}</strong><br>Q &#x3D; {${q_0, q_1, q_2, q_3, q_4, q_5}$}<br>$\Sigma$ &#x3D; {0}<br>$\Gamma$ &#x3D; {0, x, $\sqcup$}<br>Now, the transition function $\delta$ is a tough one, but the idea is easy: using two (or more) states to represent even and oddity.</p>
-<img src="/2025/06/04/church-turing-thesis/delta_func.png" class="" title="Delta Function Definition">
-
-<p>You are not required to build a TM’s transition function completely from scratch, but it is good to build a new intuition, one that is very different from both math and coding!</p>
-<p>For more practice, you can look into the book: <a target="_blank" rel="noopener" href="https://cs.brown.edu/courses/csci1810/fall-2023/resources/ch2_readings/Sipser_Introduction.to.the.Theory.of.Computation.3E.pdf#page=197">https://cs.brown.edu/courses/csci1810/fall-2023/resources/ch2_readings/Sipser_Introduction.to.the.Theory.of.Computation.3E.pdf#page=197</a></p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Anyways, this is the theoretical and formal aspect of a Turing Machine. It might appear to be a little more complicated than the Turing Machine you already learned or seen from YouTube videos: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dNRDvLACg5Q">https://www.youtube.com/watch?v=dNRDvLACg5Q</a> by Computerphile. I encourage you to watch it, for building up that intuition and visualization!</p>
-<p>Next topic, we will dive into the variations of different Turing Machines, and our proofs that these variations are all equivalent to the Universal Turing Machine in terms of computation power.</p>
+                <p>Hi! I am Satin Wuker, an open source enthusiast, theory pursuer, and …<br>(I don’t like limiting myself using natural language). I will succinctly present<br>you my new “discoveries” on the land of the Theory of Computation, in an easy-to-understand way.</p>
+<h1 id="WHY-TOC"><a href="#WHY-TOC" class="headerlink" title="WHY TOC?"></a>WHY TOC?</h1><p>The reason I started reading the theories of computation is, I was once overcome by the “hardest problem in computer science”, the P vs. NP problem. This asks whether every problem whose solution can be quickly verified (NP) can be quickly solved (P). In other words, it is asking: easy cheking &#x3D;&#x3D; easy solving? We will talk about it later in Complexity Theory.</p>
+<h1 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h1><p>My main way of learning the theory of computation is Professor Michael Sipser‘s Introduction to the Theory of Computation</p>
 
             </div>
 
@@ -251,8 +209,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://satinwukerorig.github.io/2025/06/04/church-turing-thesis/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://satinwukerorig.github.io/2025/06/04/church-turing-thesis/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://satinwukerorig.github.io/2025/06/04/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://satinwukerorig.github.io/2025/06/04/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
