@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/images/logo3.png"/>
+	<link rel="shortcut icon" href="/images/logo3.png">
+	
+			    <title>
+    Satin's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="satin" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/wp2.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+    <script>
+    window.MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+        fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_dark.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Satin Wuker</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">Categories</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="Gallery">
+		                Gallery
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="Tag">
+		                Tag
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/SatinWukerORIG" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>Now we have a feedforward and multiple activation functions in between, we need to correct the model every time it makes a mistake.<br>We can use a cost function to measure how wrong a model is. When a cost function is high, the model is bad. When a cost function is low, the model is good, relatively.</p>
+<p>Definition<br>$$<br>C(W+b) &#x3D; \sum{(predicted - actual)^2}<br>$$<br>To find the minimal $C(W + b)$ (local minimum only), we can adjust the weights W and biases b.</p>
+<h4 id="Prerequisite-Knowledge"><a href="#Prerequisite-Knowledge" class="headerlink" title="Prerequisite Knowledge"></a>Prerequisite Knowledge</h4><p>Because there are so many weight and bias variables in C(W + b), we need partial derivative $\partial$ (called partial d). So that when we are the rate of change of C(W + b) given the change of w1, we we view all other variables constant. This is written as:<br>$$\frac{\partial C} {\partial w_1}$$</p>
+<h4 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h4><blockquote>
+<p>[!Intuition] We can get the slope&#x2F;derivative&#x2F;gradient of the cost function, and go wherever the slope is steeper.<br>We are given the current weight matrices, the bias vectors, and the predicted value.</p>
+</blockquote>
+<p>Example:<br>Say we have a network with input $a_1$ and $a_2$, and weights $w_1$, $w_2$, and a bias $b$.<br>In one training, we have a data of (1, 2) -&gt; 10<br>This means &#96;&#96;&#96;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a1 = 1</span><br><span class="line">a2 = 2</span><br><span class="line">y = 10</span><br></pre></td></tr></table></figure>
+<p>We are trying to figure out how the cost function changes when each weight change,<br>Basically finding: $$\frac{\partial C} {\partial w_1}, \frac{\partial C} {\partial w_2}, \frac{\partial C} {\partial b}$$<br>Right now, cost function is $$C(w_1, w_2, b) &#x3D; (\hat{y} - y)^2$$$$&#x3D; (1 \cdot w_1 + 2 \cdot w_2 + b - 10)^2$$let $$ \ u &#x3D; 1 \cdot w_1 + 2 \cdot w_2 + b - 10,$$<br>then $$C(w_1, w_2, b) &#x3D; u^2$$<br>$$\frac{\partial C} {\partial u} &#x3D; 2u$$<br>From this, we can get $$\frac{\partial C} {\partial w_1} &#x3D; \frac{\partial C} {\partial u} \cdot \frac {\partial u } {w_1} &#x3D; 2u \cdot 1 &#x3D; 2u \cdot a_1 $$,<br> $$\frac{\partial C} {\partial w_2} &#x3D; \frac{\partial C} {\partial u} \cdot \frac {\partial u } {w_2} &#x3D; 2u \cdot 2 &#x3D; 2u \cdot a_2 $$, and<br> $$\frac{\partial C} {\partial b} &#x3D; \frac{\partial C} {\partial u} \cdot \frac {\partial u } {b} &#x3D; 2u \cdot 1 &#x3D; 2u$$</p>
+<blockquote>
+<p>[!Intuition]<br>We can simplify a large network into a network with 4 nodes connected by only one weight in between each. It goes like $$a_0 \ \rightarrow w_1 \rightarrow a_1 \rightarrow w_2 \rightarrow a_2 \rightarrow w_3 \rightarrow a_3$$<br>Now, we need to find $$\frac{\partial C}{\partial w_3}, \frac{\partial C}{\partial w_2}, \text{ and }\frac{\partial C}{\partial w_1}$$<br>We can first construct a long, nested definitions:<br>$$a_3 &#x3D; a_2 \cdot w_3 + b_3$$<br>$$a_2 &#x3D; relu(a_1 \cdot w_2 + b_2)$$<br>$$a_1 &#x3D; relu(a_0 \cdot w_1 + b_1)$$<br>$$error &#x3D; a_3 - y$$<br>$$C(w_1, w_2, w_3, b_1, b_2, b_3) &#x3D; (a_3 - y)^2$$<br>By taking derivatives, $$\frac{\partial C}{\partial w_3} &#x3D; 2 * error * a_2$$<br>$$\frac{\partial C}{\partial w_2} &#x3D; 2 * error * a_2 &#x2F; a_2 * w_3* \text{relu_derivative} (z_2) * a_1$$<br>$$&#x3D;\frac{\partial C}{\partial w_3} &#x2F; a_2 * w_3* \text{relu_derivative} (z_2) * a_1$$<br>$$\frac{\partial C}{\partial w_1}&#x3D;\frac{\partial C}{\partial w_2} &#x2F; a_1 * w_2* \text{relu_derivative} (z_1) * a_0$$</p>
+</blockquote>
+<p>Converting them into code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">backprop</span>(<span class="params">self, input_image, target</span>):</span><br><span class="line"></span><br><span class="line">	error = <span class="variable language_">self</span>.a3 - target</span><br><span class="line"></span><br><span class="line">	delta3 = error</span><br><span class="line">	dW3 = delta3 @ <span class="variable language_">self</span>.a2.T</span><br><span class="line">	db3 = delta3</span><br><span class="line"></span><br><span class="line">	delta2 = <span class="variable language_">self</span>.W3.T @ delta3 * relu_derivative(<span class="variable language_">self</span>.z2)</span><br><span class="line">	dW2 = delta2 @ <span class="variable language_">self</span>.a1.T</span><br><span class="line">	db2 = delta2</span><br><span class="line"></span><br><span class="line">	delta1 = <span class="variable language_">self</span>.W2.T @ delta2 * relu_derivative(<span class="variable language_">self</span>.z1)</span><br><span class="line">	dW1 = delta1 @ input_image.T</span><br><span class="line">	db1 = delta1</span><br><span class="line"></span><br><span class="line">	<span class="comment"># Update weights and biases</span></span><br><span class="line">	<span class="variable language_">self</span>.W3 -= LR * dW3</span><br><span class="line">	<span class="variable language_">self</span>.b3 -= LR * db3</span><br><span class="line"></span><br><span class="line">	<span class="variable language_">self</span>.W2 -= LR * dW2</span><br><span class="line">	<span class="variable language_">self</span>.b2 -= LR * db2</span><br><span class="line"></span><br><span class="line">	<span class="variable language_">self</span>.W1 -= LR * dW1</span><br><span class="line">	<span class="variable language_">self</span>.b1 -= LR * db1</span><br></pre></td></tr></table></figure>
+
+<h4 id="Understanding-more-about-gradients"><a href="#Understanding-more-about-gradients" class="headerlink" title="Understanding more about gradients"></a>Understanding more about gradients</h4><p>A gradient is a vector that shows the slopes and directions of C(W, b) in all dimensions.<br>-$\nabla C(W + b)$ is a vector of partial C(W, b) with respect to: [w1, w2, … wn, b1, b2, … bn].</p>
+<h3 id="Another-intuition-for-getting-the-gradient-of-a-weight"><a href="#Another-intuition-for-getting-the-gradient-of-a-weight" class="headerlink" title="Another intuition for getting the gradient of a weight:"></a>Another intuition for getting the gradient of a weight:</h3><p>When getting the rate of change of A with respect to Z (aka dA&#x2F;dZ), $$\frac{dA}{dZ}</p>
+<p>&#x3D;</p>
+<p>\frac{dA}{dB}</p>
+<p>\cdot</p>
+<p>\frac{dB}{dC}</p>
+<p>\cdot</p>
+<p>\ldots</p>
+<p>\cdot</p>
+<p>\frac{dX}{dY}</p>
+<p>\cdot</p>
+<p>\frac{dY}{dZ}$$</p>
+<p>This is very similar to dimensional analysis: $$\frac{meters}{seconds}</p>
+<p>\cdot</p>
+<p>\frac{seconds}{minutes}$$</p>
+<blockquote>
+<p>[!Tool Idea] Compositional Transformation System: Both dimensional analysis and chain rule in backpropagation are converting the initial value to the desired value by multiplying intermediate values. Composition means chaining simpler, foundational rules together. We can always express compositional systems in graphs.</p>
+</blockquote>
+<p>For example, when we compute the gradient of a network, we can express the relationship between entities in a tree: a3 to z3, z3 to a2, w2, and b2, and a2 to z2, …<br>We can also express dimensional analysis using a linked list (a connected, acyclic graph): $$mL \rightarrow cm^3 \rightarrow m^3 \rightarrow km^3.$$</p>
+<p>![[graph_for_gradient_calculation.png]]</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">click to comment</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'satinwukerorig-github-io'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://satinwukerorig.github.io/2026/05/26/(3)%20Backpropagation%20+%20Gradient%20Descent/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://satinwukerorig.github.io/2026/05/26/(3)%20Backpropagation%20+%20Gradient%20Descent/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//satinwukerorig-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo & Miccall</a></li>
+                <li>Owned by: <a target="_blank" rel="noopener" href="https://github.com/SatinWukerORIG" style="border-bottom: none;">Satin Wuker</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">Site total visits: <span id="busuanzi_value_site_pv"></span>times</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+
+
+</html>
